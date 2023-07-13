@@ -37,6 +37,7 @@ const Posts = () => {
       <div className="scroll-container">
         {posts.map((post) => (
           <div key={post.id} className="post-item">
+            <h1>{post.id}</h1>
             <h3 className="post-title">{post.title}</h3>
             <p className="post-text">{getShortValue(post.body, post.id)}</p>
             <Link to={`/posts/${post.id}/details`} className="more-text">more...</Link>
