@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import '../../css/PostDetails.css'
 
 const PostDetails = () => {
   const { id } = useParams();
@@ -20,12 +21,14 @@ const PostDetails = () => {
   };
 
   return (
-    <div>
+    <div className="oneuser">
       {post ? (
-        <>
+        <><div className="user">
+          <h1>{post.id}</h1>
           <h2>{post.title}</h2>
           <p>{post.body}</p>
-          <Link to="/posts">Back</Link>
+          <Link className="buttonOnUser" to="/posts">Back</Link>
+        </div>
         </>
       ) : (
         <div>Loading...</div>
